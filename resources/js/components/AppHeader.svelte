@@ -5,6 +5,8 @@
     import LayoutGrid from 'lucide-svelte/icons/layout-grid';
     import Menu from 'lucide-svelte/icons/menu';
     import Search from 'lucide-svelte/icons/search';
+    import Shirt from 'lucide-svelte/icons/shirt';
+    import SquareLibrary from 'lucide-svelte/icons/square-library';
     import AppLogo from '@/components/AppLogo.svelte';
     import AppLogoIcon from '@/components/AppLogoIcon.svelte';
     import Breadcrumbs from '@/components/Breadcrumbs.svelte';
@@ -43,6 +45,7 @@
     import { getInitials } from '@/lib/initials';
     import { toUrl } from '@/lib/utils';
     import { dashboard } from '@/routes';
+    import { browse, merch } from '@/routes/dashboard';
     import type { BreadcrumbItem, NavItem } from '@/types';
 
     let {
@@ -63,6 +66,16 @@
             href: dashboard(),
             icon: LayoutGrid,
         },
+        {
+            title: 'Browse',
+            href: browse(),
+            icon: SquareLibrary,
+        },
+        {
+            title: 'Merch',
+            href: merch(),
+            icon: Shirt,
+        }
     ];
 
     const rightNavItems: NavItem[] = [
