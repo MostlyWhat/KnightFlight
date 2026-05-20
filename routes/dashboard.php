@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\Dashboard\BrowseController;
+use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\MerchController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Dashboard\DashboardController;
-use App\Http\Controllers\Dashboard\BrowseController;
 
 Route::middleware(['auth', 'verified'])->group(function () {
 
