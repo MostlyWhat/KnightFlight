@@ -1,16 +1,11 @@
 <script lang="ts" module>
     import { dashboard } from '@/routes';
-    import { merch } from '@/routes/dashboard';
 
     export const layout = {
         breadcrumbs: [
             {
                 title: 'Dashboard',
                 href: dashboard()
-            },
-            {
-                title: 'Merch',
-                href: merch()
             },
             {
                 title: 'Receipt'
@@ -35,7 +30,7 @@
 
 <AppHead title="Receipt" />
 
-<div class="mx-auto max-w-5xl p-6">
+<div class="mx-auto max-w-5xl p-4">
     <div
         class="overflow-hidden rounded-2xl border border-sidebar-border/70 bg-card shadow-sm dark:border-sidebar-border"
     >
@@ -69,6 +64,8 @@
                 </h2>
 
                 <div class="space-y-2 text-sm text-muted-foreground">
+                    <p>{order.customer.name}</p>
+
                     <p>{order.address.street1}</p>
 
                     {#if order.address.street2}
