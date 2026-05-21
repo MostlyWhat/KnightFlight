@@ -4,52 +4,34 @@
     import Folder from 'lucide-svelte/icons/folder';
     import LayoutGrid from 'lucide-svelte/icons/layout-grid';
     import Menu from 'lucide-svelte/icons/menu';
+    import NotepadText from 'lucide-svelte/icons/notepad-text';
     import Search from 'lucide-svelte/icons/search';
     import Shirt from 'lucide-svelte/icons/shirt';
     import SquareLibrary from 'lucide-svelte/icons/square-library';
     import AppLogo from '@/components/AppLogo.svelte';
     import AppLogoIcon from '@/components/AppLogoIcon.svelte';
     import Breadcrumbs from '@/components/Breadcrumbs.svelte';
-    import {
-        Avatar,
-        AvatarFallback,
-        AvatarImage,
-    } from '@/components/ui/avatar';
+    import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
     import { Button } from '@/components/ui/button';
-    import {
-        DropdownMenu,
-        DropdownMenuContent,
-        DropdownMenuTrigger,
-    } from '@/components/ui/dropdown-menu';
+    import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
     import {
         NavigationMenu,
         NavigationMenuItem,
         NavigationMenuList,
-        navigationMenuTriggerStyle,
+        navigationMenuTriggerStyle
     } from '@/components/ui/navigation-menu';
-    import {
-        Sheet,
-        SheetContent,
-        SheetHeader,
-        SheetTitle,
-        SheetTrigger,
-    } from '@/components/ui/sheet';
-    import {
-        Tooltip,
-        TooltipContent,
-        TooltipProvider,
-        TooltipTrigger,
-    } from '@/components/ui/tooltip';
+    import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+    import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
     import UserMenuContent from '@/components/UserMenuContent.svelte';
     import { currentUrlState } from '@/lib/currentUrl.svelte';
     import { getInitials } from '@/lib/initials';
     import { toUrl } from '@/lib/utils';
     import { dashboard } from '@/routes';
-    import { browse, merch } from '@/routes/dashboard';
+    import { browse, merch, orders } from '@/routes/dashboard';
     import type { BreadcrumbItem, NavItem } from '@/types';
 
     let {
-        breadcrumbs = [],
+        breadcrumbs = []
     }: {
         breadcrumbs?: BreadcrumbItem[];
     } = $props();
@@ -64,17 +46,22 @@
         {
             title: 'Dashboard',
             href: dashboard(),
-            icon: LayoutGrid,
+            icon: LayoutGrid
         },
         {
             title: 'Browse',
             href: browse(),
-            icon: SquareLibrary,
+            icon: SquareLibrary
         },
         {
             title: 'Merch',
             href: merch(),
-            icon: Shirt,
+            icon: Shirt
+        },
+        {
+            title: 'Orders',
+            href: orders(),
+            icon: NotepadText
         }
     ];
 
@@ -82,13 +69,13 @@
         {
             title: 'Repository',
             href: 'https://github.com/laravel/svelte-starter-kit',
-            icon: Folder,
+            icon: Folder
         },
         {
             title: 'Documentation',
             href: 'https://laravel.com/docs/starter-kits#svelte',
-            icon: BookOpen,
-        },
+            icon: BookOpen
+        }
     ];
 </script>
 
@@ -111,7 +98,7 @@
                             </Button>
                         {/snippet}
                     </SheetTrigger>
-                    <SheetContent side="left" class="w-[300px] p-6">
+                    <SheetContent class="w-[300px] p-6" side="left">
                         <SheetTitle class="sr-only">Navigation menu</SheetTitle>
                         <SheetHeader class="flex justify-start text-left">
                             <AppLogoIcon
@@ -159,7 +146,7 @@
                 </Sheet>
             </div>
 
-            <Link href={toUrl(dashboard())} class="flex items-center gap-x-2">
+            <Link class="flex items-center gap-x-2" href={toUrl(dashboard())}>
                 <AppLogo />
             </Link>
 
@@ -201,9 +188,9 @@
             <div class="ml-auto flex items-center space-x-2">
                 <div class="relative flex items-center space-x-1">
                     <Button
-                        variant="ghost"
-                        size="icon"
                         class="group h-9 w-9 cursor-pointer"
+                        size="icon"
+                        variant="ghost"
                     >
                         <Search
                             class="size-5 opacity-80 group-hover:opacity-100"
@@ -224,7 +211,7 @@
                                                 class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-9 w-9 group cursor-pointer"
                                             >
                                                 <span class="sr-only"
-                                                    >{item.title}</span
+                                                >{item.title}</span
                                                 >
                                                 <item.icon
                                                     class="size-5 opacity-80 group-hover:opacity-100"

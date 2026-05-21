@@ -32,7 +32,7 @@ class Customer extends Model
     }
 
     /**
-     * Orders placed by the customer.
+     * OrdersController placed by the customer.
      */
     public function orders(): HasMany
     {

@@ -24,7 +24,7 @@ class Address extends Model
     }
 
     /**
-     * Orders shipped to this address.
+     * OrdersController shipped to this address.
      */
     public function orders(): HasMany
     {

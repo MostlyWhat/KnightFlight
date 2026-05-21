@@ -16,7 +16,11 @@ practices. The application showcases modern Laravel development techniques inclu
 ## Getting Started
 
 To run this application locally, follow the instructions in the [Laravel documentation](https://laravel.com/docs) to get
-your development server up and running.
+your development server up and running or follow the steps below.
+
+1. Install Laravel, PHP, and Composer (https://php.new)
+2. Install Node.JS v26 (https://nodejs.org/en/download/current)
+3.
 
 ## License
 
