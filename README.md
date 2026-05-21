@@ -26,6 +26,8 @@ your development server up and running or follow the steps below.
 6. Spin up a local dev server `composer run dev`
 7. Go to [localhost:8000](localhost:8000)
 
+P.S Wipe Database with `php artisan migrate:fresh`
+
 ## Where to look for Final Assignment
 
 Ideally, what the final project requires is to record data into the database. So below are the files to look for grading
@@ -45,6 +47,8 @@ I did not have enough time to iron out all of the issues, here are some below.
 4. The relationships are not correct in some cases
 5. Userid and customerid mixing because i did not modify user id enough
 6. Still asks for user data in the merch even with signed in
+7. Does not show total or customer info on the receipt
+8. Dashboard and browse has nothing
 
 But at least the assignment is done in the most complicated way possible.
 

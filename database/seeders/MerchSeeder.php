@@ -17,7 +17,7 @@ class MerchSeeder extends Seeder
             'sku' => 'KFC-001',
             'item_name' => 'Knight Flight Cap',
             'description' => 'Embroidered hat with adjustable strap.',
-            'image_url' => '/storage/merch/knight-flight-cap.jpg',
+            'image_url' => 'https://images.unsplash.com/photo-1571587783275-e516087c502c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             'price' => 18.00,
             'weight_oz' => 6.40, // 0.4 lb × 16
             'quantity_in_stock' => 50,
@@ -29,7 +29,7 @@ class MerchSeeder extends Seeder
             'sku' => 'PS-001',
             'item_name' => 'Pilot Shirt',
             'description' => 'Branded shirt with breathable fabric.',
-            'image_url' => '/storage/merch/pilot-shirt.jpg',
+            'image_url' => 'https://plus.unsplash.com/premium_photo-1683134205839-4034616645d6?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             'price' => 35.00,
             'weight_oz' => 12.80, // 0.8 lb × 16
             'quantity_in_stock' => 50,
@@ -41,7 +41,7 @@ class MerchSeeder extends Seeder
             'sku' => 'TM-001',
             'item_name' => 'Travel Mug',
             'description' => 'Insulated mug for hot or cold drinks.',
-            'image_url' => '/storage/merch/travel-mug.jpg',
+            'image_url' => 'https://images.unsplash.com/photo-1555447014-7ead71574544?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             'price' => 22.00,
             'weight_oz' => 9.60, // 0.6 lb × 16
             'quantity_in_stock' => 50,
